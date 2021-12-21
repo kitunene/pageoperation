@@ -50,10 +50,18 @@
         recognizer.listen(result => {
             const scores = result.scores; // probability of prediction for each class
             // render the probability scores per class
-            for (let i = 0; i < classLabels.length; i++) {
-                const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
-                labelContainer.childNodes[i].innerHTML = classPrediction;
+            if (result.scores[1].toFixed(2) > 0.65){
+                window.open('https://www.google.co.jp/');
+            }else if(result.scores[0].toFixed(2) > 0.65){
+                function winClose(){
+                    open('about:blank','_self').close();
+                }
+            }else if(result.scores[2].toFixed(2) > 0.65){
+                history.forward();
+            }else if(result.scores[3].toFixed(2) > 0.65){
+                history.back();
             }
+
         }, {
             includeSpectrogram: true, // in case listen should return result.spectrogram
             probabilityThreshold: 0.75,
