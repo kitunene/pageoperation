@@ -50,19 +50,19 @@
             recognizer.listen(result => {
                 const scores = result.scores; // probability of prediction for each class
                 // render the probability scores per class
-                if (result.scores[0].toFixed(2) > 0.90){
+                if (result.scores[0].toFixed(2) > 0.80){
                     window.open('https://www.amazon.co.jp/');
-                }else if(result.scores[1].toFixed(2) > 0.90){
+                }else if(result.scores[1].toFixed(2) > 0.80){
                     window.open('https://www.yahoo.co.jp/');
-                }else if(result.scores[2].toFixed(2) > 0.90){
+                }else if(result.scores[2].toFixed(2) > 0.80){
                     window.open('https://www.google.com/?hl=ja');
-                }else if(result.scores[3].toFixed(2) > 0.90){
+                }else if(result.scores[3].toFixed(2) > 0.80){
                     window.open('https://www.youtube.com/');
-                }else if(result.scores[4].toFixed(2) > 0.90){
+                }else if(result.scores[4].toFixed(2) > 0.80){
                     window.open('https://github.co.jp/');
-                }else if(result.scores[5].toFixed(2) > 0.90){
+                }else if(result.scores[5].toFixed(2) > 0.80){
                     window.open('https://twitter.com/');
-                }else if(result.scores[6].toFixed(2) > 0.90){
+                }else if(result.scores[6].toFixed(2) > 0.80){
                     window.open('https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%9A%E3%83%BC%E3%82%B8');
                 }
 
