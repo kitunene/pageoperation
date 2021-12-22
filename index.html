@@ -66,10 +66,7 @@
                     window.open('https://www.yahoo.co.jp/');
                 }
 
-                for (let i = 0; i < classLabels.length; i++) {
-                    const classPrediction = classLabels[i] + ": " + result.scores[i].toFixed(2);
-                    labelContainer.childNodes[i].innerHTML = classPrediction;
-                }
+             
             }, {
                 includeSpectrogram: true, // in case listen should return result.spectrogram
                 probabilityThreshold: 0.75,
