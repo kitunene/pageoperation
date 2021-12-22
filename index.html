@@ -50,7 +50,7 @@
             recognizer.listen(result => {
                 const scores = result.scores; // probability of prediction for each class
                 // render the probability scores per class
-                if (result.scores[0].toFixed(2) > 0.80){
+                if (result.scores[0].toFixed(2) > 0.90){
                     window.open('https://www.amazon.co.jp/');
                 }else if(result.scores[1].toFixed(2) > 0.90){
                     window.open('https://www.yahoo.co.jp/');
